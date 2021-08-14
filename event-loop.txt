@@ -1,0 +1,19 @@
+Event Loop
+----------
+-> JS is a single-threaded non-blocking asynchronous concurrent language
+-> It have a call stack, and event loops, a callback queue and some other apis and stuff
+-> v8 has a call stack and a heap
+
+call stack == one threaded == one thing at a time
+
+event loop role is to look in to the call stack and task queue, if stack is empty, fetch from queue and execute it
+
+browser will do re-paints every few milli-seconds. if there is something in stack, it will not render
+once stack is cleared, render will continue re-renders even in between callback queues
+at the time of callback queue pushed to stack it pauses again and then resumes again once call stack is cleared
+render queue will have high priority over callback queue
+
+Ref
+---
+https://nodejs.dev/learn/the-nodejs-event-loop
+https://course-api.com/
