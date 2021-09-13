@@ -16,6 +16,9 @@ app.use("/api/v1/tasks", tasks);
 app.use(notFound);
 app.use(errorHandlerMiddleware);
 
+// PORT=5000 node app.js
+// const port = process.env.PORT || 3000;
+
 const port = 3000;
 
 const start = async () => {
